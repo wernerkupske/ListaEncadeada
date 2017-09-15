@@ -9,13 +9,6 @@ package listaencadeada;
  *
  * @author informatica
  */
-public class ListaEncadeada {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        
-    }
-    
+public class Alunos {
+    String nome;
 }
