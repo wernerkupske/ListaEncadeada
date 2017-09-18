@@ -2,8 +2,18 @@ package listaencadeada;
 
 public class Aluno {
 
+    public Aluno(String nome, int cod) {
+        this.nome = nome;
+        this.cod = cod;
+    }
+
     String nome;
     int cod;
+    Aluno proximo;
+
+    Aluno() {
+        System.out.println("N sei o que faz!");
+    }
 
     public String getNome() {
         return nome;

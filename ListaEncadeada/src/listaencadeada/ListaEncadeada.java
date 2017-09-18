@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ListaEncadeada {
 
     public static void main(String[] args) {
-        Scanner leia = new Scanner(System.in);
+        Scanner tec = new Scanner(System.in);
         int op = 0;
         do{
         System.out.println("  1 - Incluir um objeto no início na lista\n"
@@ -17,10 +17,12 @@ public class ListaEncadeada {
                 + "  7 - Mostrar todos os objetos da lista na ordem do primeiro para o último\n"
                 + "  8 - Mostrar todos os objetos da lista na ordem do último para o primeiro\n"
                 + "  9 - Sair");
-        op = leia.nextInt();
+        op = tec.nextInt();
         }while(op<1 || op>9);
         switch (op) {
             case 1:
+                Metodos teste = new Metodos();
+                teste.insereInicio();
                 break;
             case 2:
                 break;

@@ -5,6 +5,8 @@
  */
 package listaencadeada;
 
+import java.util.Scanner;
+
 /**
  *
  * @author informatica
@@ -28,38 +30,49 @@ package listaencadeada;
         - mostrar todos os objetos da lista na ordem do primeiro para o último
 
         - mostrar todos os objetos da lista na ordem do último para o primeiro
-     */
+ */
 public class Metodos {
-    public void insereInicio(){
-        Aluno a1 = new Aluno();
-        
+
+    Scanner tec = new Scanner(System.in);
+
+    public void insereInicio() {
+        Aluno a1 = new Aluno("Augusto", 10);
+        Aluno inicio = a1;
+        Aluno novo = new Aluno();
+        novo.proximo = inicio;
+        inicio = novo;
     }
-    
-    public void InsereFim(){
-        
+
+    public void InsereFim() {
+
     }
-    
-    public void verificaLista(){
-        
+
+    public void verificaLista() {
+        System.out.println("Digite o código do aluno: ");
+        int cod = 0;
+        cod = tec.nextInt();
+        if(cod){
+            
+        }
     }
-    
-    public void removeDaLista(){
-        
-    } 
-    
-    public void removePrimeiro(){
-        
+
+    public void removeDaLista() {
+
     }
-    
-    public void removeUltimo(){
-        
+
+    public void removePrimeiro() {
+
     }
-    
-    public void mostraListaPrimeiroUltimo(){
-        
+
+    public void removeUltimo() {
+
     }
-    
-    public void mostraListaUltimoPrimeiro(){
-        
+
+    public void mostraListaPrimeiroUltimo() {
+
+    }
+
+    public void mostraListaUltimoPrimeiro() {
+
     }
 }
