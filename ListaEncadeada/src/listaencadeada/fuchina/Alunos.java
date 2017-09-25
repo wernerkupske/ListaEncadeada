@@ -1,29 +1,44 @@
 package listaencadeada.fuchina;
-
+ 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+ 
 public class Alunos {
-
-    private String nome;
-    private int cod;
-
-    public Alunos(String nome, int cod) {
+ 
+    int codigo;
+    String nome;
+    Alunos proximo;
+ 
+    public Alunos() {
+    }
+ 
+    public Alunos(int cod, String nome, Alunos proximo) {
+        this.codigo = cod;
         this.nome = nome;
-        this.cod = cod;
+        this.proximo = proximo;
     }
-
-    public String getNome() {
-        return nome;
+ 
+    public int pedeInteiro(String mensagem, int min, int max) {
+        int aux = 0;
+        Scanner leia = new Scanner(System.in);
+        do {
+            try {
+                System.out.println(mensagem);
+                aux = leia.nextInt();
+                if (aux < min || aux > max) {
+                    System.out.println("ERRO: Digite um número de "+min+" à "+max+".");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("ERRO: Digite apenas números inteiros.");
+                aux = - 1;
+            }
+        } while ((aux < min || aux > max));
+        return aux;
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+ 
+    public String pedeNome() {
+        Scanner leia = new Scanner(System.in);
+        System.out.println("Informe o nome do aluno: ");
+        return leia.nextLine();
     }
-
-    public int getCod() {
-        return cod;
-    }
-
-    public void setCod(int cod) {
-        this.cod = cod;
-    }
-
 }

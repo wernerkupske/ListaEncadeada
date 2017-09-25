@@ -51,9 +51,6 @@ public class Metodos {
         System.out.println("Digite o código do aluno: ");
         int cod = 0;
         cod = tec.nextInt();
-        if(cod){
-            
-        }
     }
 
     public void removeDaLista() {
